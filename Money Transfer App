@@ -50,6 +50,34 @@ class Account {
       index++;
     }
   }
+    public void addMoney(String name, int id, double amount)
+  {
+    int length = user.length;
+    int temp = 0;
+    boolean flag = false;
+    for (int i = 0; i < user.length; i++)
+    {
+      if (user[i].getId() == id)
+      {
+        flag = true;
+        user[i].increaseAmount(amount);
+      }
+    }
+    if (flag == false)
+    {
+      PayPal[] copied = new PayPal[length];
+      for (int i = 0; i < copied.length; i++)
+      {
+        copied[i] = user[i];
+      }
+      user = new PayPal[length+1];
+      for (int i = 0; i < copied.length; i++)
+      {
+        user[i] = copied[i];
+      }
+      user[length] = new PayPal(name, id, amount);
+    }
+  }
  
   public void subMoney(String name, int id, double amount)
   {
@@ -108,21 +136,3 @@ class Account {
     }
   }
 }
-public static void main(String[] args)
-  {
-    Account a = new Account(3);
-     a.addPerson("Joshua Barnett", 19453, 50.0, 0);
-     a.addPerson("Paul Sack", 83482, 0, 1);
-     a.addPerson("Lena Smith", 94393, 90.0, 2);
-     a.printAllUsers();
-     StdOut.println();
-     a.subMoney("Sam Smith", 34323, 0);
-     a.subMoney("Lena Smith", 94393, 60.0);
-     a.printAllUsers();
-     StdOut.println();
-  
-     for(PayPal i: a.noMoney())
-     {
-       StdOut.println(i);
-     }
-   }
