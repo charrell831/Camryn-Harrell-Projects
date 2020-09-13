@@ -1,0 +1,128 @@
+class PayPal {
+  private String name;
+  private int id;
+  private double money;
+
+  public PayPal(String name, int id, double money)
+  {
+    this.name = name;
+    this.id = id;
+    this.money = money;
+  }
+  public String getName()
+  {
+    return name;
+  }
+  public int getId()
+  {
+    return id;
+  }
+  public double getMoneyAmount()
+  {
+    return money;
+  }
+  public void increaseAmount(double amount)
+  {
+    this.money += amount;
+  }
+  public void decreaseAmount(double amount)
+  {
+    this.money -= amount;
+  }
+  public String toString()
+  {
+    return name + ", " + id + ", " + money;
+  }
+}
+
+class Account {
+  private PayPal[] user;
+
+  public Account(int numUsers)
+  {
+    user = new PayPal[numUsers];
+  }
+  public void addPerson(String name, int id, double money, int index)
+  {
+    if (index < user.length)
+    {
+      user[index] = new PayPal(name, id, money);
+      index++;
+    }
+  }
+ 
+  public void subMoney(String name, int id, double amount)
+  {
+    int length = user.length;
+    boolean flag = false;
+    for (int i = 0; i < user.length; i++)
+    {
+      if (user[i].getId() == id)
+      {
+        user[i].decreaseAmount(amount);
+        flag = true;
+      }
+    }
+    if (flag == false)
+    {
+      PayPal[] copied = new PayPal[length];
+      for (int i = 0; i < copied.length; i++)
+      {
+        copied[i] = user[i];
+      }
+      user = new PayPal[length+1];
+      for (int i = 0; i < copied.length; i++)
+      {
+        user[i] = copied[i];
+      }
+      user[length] = new PayPal(name, id, amount);
+    }
+  }
+  public PayPal[] noMoney()
+  {
+    int count = 0;
+    for (int i = 0; i < user.length; i++)
+    {
+      if (user[i].getMoneyAmount() == 0)
+      {
+        count++;
+      }
+    }
+    PayPal[] emptyPayPal = new PayPal[count];
+    int temp = 0;
+    for (int i = 0; i < user.length; i++)
+    {
+      if (user[i].getMoneyAmount() == 0)
+      {
+        emptyPayPal[temp] = user[i];
+        temp++;
+      }
+    }
+    return emptyPayPal;
+  }
+  public void printAllUsers()
+  {
+    for (int i = 0; i < user.length; i++)
+    {
+      StdOut.println(user[i].toString());
+    }
+  }
+}
+public static void main(String[] args)
+  {
+    Account a = new Account(3);
+     a.addPerson("Joshua Barnett", 19453, 50.0, 0);
+     a.addPerson("Paul Sack", 83482, 0, 1);
+     a.addPerson("Lena Smith", 94393, 90.0, 2);
+     a.printAllUsers();
+     StdOut.println();
+     a.subMoney("Sam Smith", 34323, 0);
+     a.subMoney("Lena Smith", 94393, 60.0);
+     a.printAllUsers();
+     StdOut.println();
+  
+     for(PayPal i: a.noMoney())
+     {
+       StdOut.println(i);
+     }
+   }
