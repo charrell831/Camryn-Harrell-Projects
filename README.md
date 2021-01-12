@@ -7,4 +7,6 @@ TutoringMatch--> this code takes in a group of tutors that is inputed by the use
 
 AirbnbUser Match--> this code takes in a group of Airbnb hosts. It has two classes: Airbnb (which takes on the user) and Accounts (which takes on the hosts). The Airbnb and Account objects have the following attributes: name, area and budget. The methods in Accounts use those attributes to return the appropriate matches based on either area, budget or both.
 
-Movie-App --> an app that allows the user to choose from a variety of movies and add certain films that they like in particular to a "favorites" category. (From a tutorial)
+Movie-App --> an app that allows the user to choose from a variety of movies and add certain films that they like in particular to a "favorites" category. (From a tutorial: https://www.youtube.com/watch?v=jc9_Bqzy2YQ&t=2020s)
+
+2048 --> mock of the 2048 app, also from a tutorial (https://www.youtube.com/watch?v=aDn2g8XfSMc)
