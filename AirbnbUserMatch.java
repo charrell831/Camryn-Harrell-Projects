@@ -2,24 +2,29 @@ class Airbnb {
   private String name;
   private String area;
   private double budget;
+  
   public Airbnb (String name, String area, double budget)
   {
     this.name = name;
     this.area = area;
     this.budget = budget;
   }
+  
   public String getName()
   {
     return this.name;
   }
+  
   public String getArea()
   {
     return this.area;
   }
+  
   public double getBudget()
   {
     return this.budget;
   }
+  
   public String toString()
   {
     return this.name + ", " + this.area + ", " + this.budget;
@@ -27,10 +32,12 @@ class Airbnb {
 }
 class Accounts {
   private Airbnb[] users;
+  
   public Accounts (int numUsers)
   {
     users = new Airbnb[numUsers];
   }
+  
   public void addPerson(String name, String area, double budget, int index)
   {
     if (index < users.length)
@@ -38,6 +45,7 @@ class Accounts {
       users[index] = new Airbnb(name, area, budget);
     }
   }
+  
   public Airbnb[] sameAreas(Airbnb n)
   {
     int count = 0;
@@ -48,6 +56,7 @@ class Accounts {
         count++;
       }
     }
+    
     Airbnb[] areas = new Airbnb[count];
     int temp = 0;
     for (int i = 0; i < users.length; i++)
@@ -60,6 +69,7 @@ class Accounts {
     }
     return areas;
   }
+  
   public Airbnb[] goodBudget(Airbnb n)
   {
     int count = 0;
@@ -82,6 +92,7 @@ class Accounts {
     }
     return budgets;
   }
+  
   public Airbnb[] perfection(Airbnb n)
   {
     int count = 0;
@@ -104,6 +115,7 @@ class Accounts {
     }
     return perfect;
   }
+  
   public void printAllUsers()
   {
     for (int i = 0; i < users.length; i++)
@@ -136,6 +148,6 @@ class Test {
         {
           StdOut.println(i);
         }
-      //  s1.printAllUsers();
+        s1.printAllUsers();
       }
   }
