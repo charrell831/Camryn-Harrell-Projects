@@ -25,12 +25,15 @@ class Tutor {
     return name + ", " + subject + ", " + rating;
   }
 }
+
 class Match {
   private Tutor[] matches;
+  
   public Match (int numTutors)
   {
     matches = new Tutor[numTutors];
   }
+  
   public void addTutor(String name, String subject, double rating, int index)
   {
     if (index < matches.length)
@@ -38,6 +41,7 @@ class Match {
       matches[index] = new Tutor (name, subject, rating);
     }
   }
+  
   public void addMoreTutors(String name, String subject, double rating)
   {
     boolean flag = false;
@@ -65,6 +69,7 @@ class Match {
       matches[len] = new Tutor(name, subject, rating);
     }
   }
+  
   public Tutor[] subjectMatch (String subject)
   {
     int count = 0;
@@ -87,6 +92,7 @@ class Match {
     }
     return subMatch;
   }
+  
   public Tutor highPer()
   {
     double large = 0;
@@ -108,6 +114,7 @@ class Match {
     }
     return null;
   }
+  
   public Tutor perfect(String subject)
   {
     int count = 0;
@@ -145,6 +152,7 @@ class Match {
     }
     return null;
   }
+  
   public void printAll()
   {
     for (int i = 0; i < matches.length; i++)
@@ -175,13 +183,10 @@ class Match {
       m1.addTutor("Yolanda", "Art", 4.2, 1);
       m1.addTutor("Sadie", "Math", 2.5, 2);
       m1.addMoreTutors("Lauren", "English", 5.0);
-      // for (Tutor i : m1.subjectMatch("Math"))
-      // {
-      //   StdOut.println(i);
-      // }
+     
+      
       StdOut.println();
       m1.printAll();
-      // StdOut.println(m1.highPer());
-      // StdOut.println(m1.perfect("Math"));
+      
 }
 }
