@@ -165,19 +165,6 @@ class Match {
   class Test {
     public static void main(String[] args)
     {
-      Google g1 = new Google(8);
-      g1.addArticles("Coffee hacks", 0);
-      g1.addArticles("Colorblindness in dogs", 1);
-      g1.addArticles("The color of trees", 2);
-      g1.addArticles("How Disney grew into an empire", 3);
-      g1.addArticles("Who is the biggest Disney star", 4);
-      g1.addArticles("How Disney bought the Avengers", 5);
-      g1.addArticles("Nickelodeon vs Disney", 6);
-      g1.addArticles("The best President", 7);
-      for (Articles i : g1.searchBar("Disney"))
-      {
-        StdOut.println(i);
-      }
       Match m1 = new Match(3);
       m1.addTutor("Mark", "Math", 3.2, 0);
       m1.addTutor("Yolanda", "Art", 4.2, 1);
