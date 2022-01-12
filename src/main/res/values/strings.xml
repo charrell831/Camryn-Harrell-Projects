@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Project 5</string>
+
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <string name="error_number">Invalid Input</string>
+    <string name="numer_size">Phone numbers must have 10 digits.</string>
+    <string name="order_submit">Your order has been submitted!</string>
+    <string name="order_placed">Your order has been placed!</string>
+    <string name="no_orders">There are no current orders to display.</string>
+    <string name="removed_order">Your order has been removed.</string>
+
+</resources>
