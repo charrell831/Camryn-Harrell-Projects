@@ -125,26 +125,6 @@ public class HeartTransplant {
       }
       return surviveCount;
     }
-  //   this.survivabilityByAge = new SurvivabilityByAge[numberOfLines];
-  //   double[] r = new double[3];
-  //   int surviveCount = 0;
-  //   for (int i = 0; i < numberOfLines; i++)
-  //   {
-  //     for (int j = 0; j < 3; j++)
-  //     {
-  //       r[j] = StdIn.readDouble();
-  //     }
-  //
-  // SurvivabilityByAge temp = new SurvivabilityByAge((int)r[0], (int)r[1], r[2]);
-  //
-  //     if (addRate(temp, surviveCount) == 0)
-  //     {
-  //       surviveCount++;
-  //     }
-  //
-  //   }
-  //
-  // return surviveCount;
     /*
      * 1) Creates the survivabilityByCause array with numberOfLines length.
      *
@@ -186,24 +166,6 @@ public class HeartTransplant {
       }
       return causeCount;
     }
-    // this.survivabilityByCause = new SurvivabilityByCause[numberOfLines];
-    // double[] c = new double[3];
-    // //double[] cd = new double[1];
-    // int surviveCount = 0;
-    // for (int i = 0; i < numberOfLines; i++)
-    // {
-    //   for (int j = 0; j < 3; j++)
-    //   {
-    //     c[j] = StdIn.readDouble();
-    //  }
-    //
-    //   SurvivabilityByCause temp = new SurvivabilityByCause((int)c[0], (int)c[1], c[2]);
-    //   if (addCause(temp, surviveCount) == 0)
-    //   {
-    //     surviveCount++;
-    //   }
-    // }
-    // return surviveCount;
     /*
      * Returns listOfPatients
      */
@@ -264,29 +226,6 @@ public class HeartTransplant {
        }
        return personAboveAge;
      }
-     //  int count = 0;
-     //  for (int i = 0; i < listOfPatients.length; i++)
-     //  {
-     //    if (listOfPatients[i].getAge() > age)
-     //    {
-     //      count++;
-     //    }
-     //  }
-     //  Person[] personAboveAge = new Person[count];
-     //  int temp = 0;
-     //  for (int i = 0; i < listOfPatients.length; i++)
-     //  {
-     //    if (listOfPatients[i].getAge() > age)
-     //    {
-     //      personAboveAge[temp] = listOfPatients[i];
-     //      temp++;
-     //    }
-     //  }
-     //  if (personAboveAge.length == 0 || personAboveAge == null)
-     //  {
-     //    return null;
-     //  }
-     // return personAboveAge;
 
     /*
      * Returns a Person array with every Person that has the state of health
@@ -325,29 +264,7 @@ public class HeartTransplant {
       }
       return listOfPatients;
     }
-    // int count = 0;
-    // for (int i = 0; i < listOfPatients.length; i++)
-    // {
-    //   if (listOfPatients[i].getStateOfHealth() == state)
-    //   {
-    //     count++;
-    //   }
-    // }
-    // Person[] sameState = new Person[count];
-    // int temp = 0;
-    // for (int i = 0; i < listOfPatients.length; i++)
-    // {
-    //   if (listOfPatients[i].getStateOfHealth() == state)
-    //   {
-    //     sameState[temp] = listOfPatients[i];
-    //     temp++;
-    //   }
-    // }
-    // if (sameState.length == 0 || sameState == null)
-    // {
-    //   return null;
-    // }
-    // return sameState;
+    
     /*
      * Returns a Person array with every person that has the heart
      * condition cause equal to the parameter cause from the listOfPatients array.
@@ -386,31 +303,6 @@ public class HeartTransplant {
       return equalCause;
 
      }
-     // int count = 0;
-     //
-     // for (int i = 0; i < listOfPatients.length; i++)
-     // {
-     //   if (listOfPatients[i].getCause() == cause)
-     //   {
-     //     count++;
-     //   }
-     // }
-     //
-     // Person[] equalCause = new Person[count];
-     //
-     // for (int i = 0; i < listOfPatients.length; i++)
-     // {
-     //  if (listOfPatients[i].getCause() == cause)
-     //  {
-     //    for(int a = 0; a < equalCause.length; a++)
-     //    {
-     //      equalCause[a] = listOfPatients[i];
-     //    }
-     //  }
-     //  return equalCause;
-     // }
-     //
-     // return null;
     /*
      * Assume there are numberOfHearts available for transplantation surgery.
      * Also assume that the hearts are of the same blood type as the
