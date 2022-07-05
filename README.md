@@ -1,5 +1,5 @@
 # Camryn-Harrell-Projects
-This code represents mostly projects that I have created on my own with the exception of HeartTransplant.java which is a school project.
+HeartTransplantProject->This code represents mostly projects that I have created on my own with the exception of HeartTransplant.java which is a school project.
 
 GoogleSearch--> this code creates a class called Google and uses the class, Article, to match any articles within the article class with a title that has been entered into the program. The Google class has the option printing out any articles based on any keywords.
 
