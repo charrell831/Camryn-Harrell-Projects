@@ -1,4 +1,4 @@
-Pizza Application
+#Pizza Application
 
 This project was a mobile application that was coded in Java and built using Android Studio. It was a project that I worked on with a classmate that simulated ordering a pizza online. 
 
